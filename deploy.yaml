@@ -23,6 +23,9 @@ spec:
   port:
     targetPort: 5000
   wildcardPolicy: None
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
 
 ---
 apiVersion: apps/v1

@@ -9,7 +9,7 @@ def hello():
 
 @app.route('/true', methods=['GET', 'POST'])
 def returnTrue():
-    return '{"active": true}'
+    return '{"active": true, "scope": "openid"}'
 
 @app.route('/false', methods=['GET', 'POST'])
 def returnFalse():
