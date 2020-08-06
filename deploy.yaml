@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-tester-service
+spec:
+  selector:
+    app: api-tester
+  ports:
+  - protocol: "TCP"
+    port: 5000
+  type: ClusterIP 
+---
+
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: api-tester-service
+  namespace: dp-test
+spec:
+  to:
+    kind: Service
+    name: api-tester-service
+    weight: 100
+  port:
+    targetPort: 5000
+  wildcardPolicy: None
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-tester
+spec:
+  selector:
+    matchLabels:
+      app: api-tester
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: api-tester
+    spec:
+      containers:
+      - name: api-tester
+        image: cstsui/flask-api
+#        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
