@@ -2,6 +2,7 @@ from flask import Flask
 app = Flask(__name__)
 
 
+# For testing introspect endpoint in oauth flow
 @app.route('/', methods=['GET', 'POST'])
 def hello():
     return '{"active": true }'

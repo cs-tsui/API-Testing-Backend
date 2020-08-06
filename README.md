@@ -6,7 +6,6 @@ Serves as an Arbitrary API Endpoint for Testing Purposes
 pip install -r requirements.txt
 
 python myflask.py
-
 ```
 
 ## Build
@@ -22,5 +21,5 @@ docker push cstsui/flask-api
 oc new-project api-backend
 
 # Creates route/service/deployment
-oc applyh -f deploy.yaml
+oc apply -f deploy.yaml
 ```

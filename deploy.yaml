@@ -15,7 +15,6 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: api-tester-service
-  namespace: dp-test
 spec:
   to:
     kind: Service
