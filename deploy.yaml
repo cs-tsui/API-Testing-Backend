@@ -44,7 +44,7 @@ spec:
     spec:
       containers:
       - name: api-tester
-        image: cstsui/flask-api
+        image: cstsui/introspect-dummy
 #        imagePullPolicy: Never
         ports:
         - containerPort: 5000
