@@ -45,6 +45,10 @@ spec:
       containers:
       - name: api-tester
         image: cstsui/introspect-dummy:1.0.0
+        # Allow prints to show in logs
+        env:
+        - name: PYTHONUNBUFFERED
+          value: "0"
 #        imagePullPolicy: Never
         ports:
         - containerPort: 5000

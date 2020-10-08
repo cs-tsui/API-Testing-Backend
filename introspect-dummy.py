@@ -6,8 +6,9 @@ app = Flask(__name__)
 def printRequesterIP():
     request_addr = request.remote_addr
     HTTP_X_REAL_IP_header = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
-    print("request_addr:", request.remote_addr)
-    print("HTTP_X_REAL_IP_HEADER:", HTTP_X_REAL_IP_header)
+    print("request_addr:", request.remote_addr, "\n")
+    print("HTTP_X_REAL_IP_HEADER:", HTTP_X_REAL_IP_header, "\n")
+    print("\n")
     
 # For testing introspect endpoint in oauth flow
 @app.route('/', methods=['GET', 'POST'])
