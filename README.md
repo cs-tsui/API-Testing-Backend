@@ -5,14 +5,14 @@ Serves as an Arbitrary API Endpoint for Testing Purposes
 ```
 pip install -r requirements.txt
 
-python myflask.py
+python introspect-dummy.py
 ```
 
 ## Build
 
 ```
-docker build -t cstsui/flask-api .
-docker push cstsui/flask-api
+docker build -t cstsui/introspect-dummy .
+docker push cstsui/introspect-dummy
 ```
 
 ## Deploy on Openshift
