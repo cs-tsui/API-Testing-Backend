@@ -6,4 +6,4 @@ ADD . /app/
 RUN pip install -r requirements.txt
 
 EXPOSE 5000
-CMD ["python", "/app/myflask.py"]
+CMD ["python", "/app/introspect-dummy.py"]

@@ -11,8 +11,8 @@ python introspect-dummy.py
 ## Build
 
 ```
-docker build -t cstsui/introspect-dummy .
-docker push cstsui/introspect-dummy
+docker build -t cstsui/introspect-dummy:1.0.0 .
+docker push cstsui/introspect-dummy:1.0.0
 ```
 
 ## Deploy on Openshift
